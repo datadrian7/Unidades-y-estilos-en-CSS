@@ -1,0 +1,35 @@
+/* Variables para todos los elementos html */
+:root {
+  color: darkgreen;
+  --dafault-bg-color: skyblue;
+}
+
+html {
+  color: red;
+}
+
+/* Variables para un elemento en particular */
+.custom-props-1 {
+  --primary-color: gray;
+  --font-size: 32px;
+  background-color: var(--primary-color);
+  border: thin solid var(--border-color);
+}
+
+.custom-props-2 {
+  background-color: var(--dafault-bg-color);
+  border: thin solid var(--border-color);
+  padding: 1rem;
+}
+
+.custom-props-3 {
+  font-size: var(--font-size);
+  border: thin solid var(--border-color);
+  padding: 1rem;
+}
+
+.title-props {
+  --primary-color: navy;
+  color: var(--primary-color, orange);
+  background-color: var(--dafault-bg-color);
+}

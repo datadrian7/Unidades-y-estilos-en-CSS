@@ -1,0 +1,154 @@
+/* 
+Unidades de medida
+  1.Absolutas (Su valor no cambia, son unidades del mundo real)
+  pc, cm, mm, in, Q
+  pt (1/72in)
+  px (1/96in)
+
+  2. Relativas (su valor es relativo a un contexto)
+  em, rem, ex, ch - al tamaño de la fuente.
+  em -  basada en la anchura de la "m" de la fuente del elemento.
+  rem - basada en la anchura de la "m" de la fuente del elemento raiz (html).
+  ex -  basada en la altura de la "x" de la altura del elemento.
+  ch -  basada en la anchura del "0" de la fuente del elemento.
+  % - al tamaño del contenedor.
+  vw, vh, vmin, vmax - al tamaño del viewport.
+  vw - ancho del viewport, van de 1 a 100
+  vh - alto del viewport, van de 1 a 100.
+  vmax - entre vw y vh toma el que tenga mayor valor.
+  vmin - entre vw y vh toma el que tenga menor valor.
+
+
+  Conversiones entre unidades - http://pxtoem.com/
+
+
+
+*/
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-size: 32px;
+  font-size: 16px;
+  /* background-color: black; */
+}
+
+body {
+  margin: 0;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/* Pixels */
+
+.pixels {
+  background-color: cadetblue;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  font-size: 16px;
+  border: thick solid rebeccapurple;
+}
+
+/* EMs */
+
+.ems {
+  background-color: aqua;
+  font-size: 24px;
+  padding: 1em 0.5em;
+  border: 5px solid rebeccapurple;
+}
+
+.em-child {
+  background-color: chartreuse;
+  border: thick solid #fff;
+  margin: 0.5em;
+  padding: 1em;
+  font-size: 2em;
+}
+
+/* REMs */
+.rems {
+  background-color: aqua;
+  font-size: 24px;
+  padding: 1rem 0.5rem;
+  border: 5px solid rebeccapurple;
+}
+
+.rem-child {
+  background-color: chartreuse;
+  border: thick solid #fff;
+  margin: 0.5rem;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+/* EXs */
+
+.ex {
+  background-color: aqua;
+  font-size: 24px;
+  padding: 1ex 0.5ex;
+  border: 5px solid rebeccapurple;
+}
+
+.ex-child {
+  background-color: chartreuse;
+  border: thick solid #fff;
+  margin: 0.5ex;
+  padding: 1ex;
+  font-size: 2ex;
+}
+
+/* CHs */
+.chs {
+  background-color: cadetblue;
+  width: 10ch;
+}
+
+/* Porcentajes */
+
+.percentages {
+  background-color: olive;
+  padding: 5%;
+  width: 80%;
+  font-size: 100%;
+  height: 100%;
+}
+
+.height-parent {
+  width: 500px;
+  height: 500px;
+  background-color: brown;
+}
+
+.height-child {
+  background-color: coral;
+  width: 50%;
+  height: 50%;
+}
+
+/* Unidades de viewport */
+.viewport {
+  background-color: darkcyan;
+  width: 50vw;
+  /* Recuerda que la etiqueta body tiene margenes por defecto y recuerda que las barras de scroll del navegador también forman parte del viewport */
+  width: 100%;
+  width: 100vw;
+  height: 50vh;
+  height: 100vh;
+  font-size: 5vw;
+  padding: 2vh 2vw;
+}
+
+/* vmin - vmax */
+.vmin,
+.vmax {
+  background-color: darksalmon;
+  border: thick solid #000;
+  width: 50vmax;
+  height: 50vmin;
+}
