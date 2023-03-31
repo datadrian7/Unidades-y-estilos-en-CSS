@@ -6,6 +6,13 @@
 
 html {
   color: red;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
 /* Variables para un elemento en particular */
@@ -32,4 +39,29 @@ html {
   --primary-color: navy;
   color: var(--primary-color, orange);
   background-color: var(--dafault-bg-color);
+}
+
+/* Función calc */
+
+.ch-10 {
+  --padding-size: 2ch;
+  --num-ch: 10ch;
+  background-color: var(--dafault-bg-color);
+  font-size: 2rem;
+  padding: var(--padding-size);
+  width: calc(var(--num-ch) + var(--padding-size) * 2);
+}
+
+/* Funciones min() - max() */
+
+.min-max {
+  background-color: rebeccapurple;
+  color: white;
+  margin-top: 1rem;
+  width: min(300px, 20vw, 20rem);
+  height: max(200px, 25vh);
+}
+
+h1 {
+  font-size: clamp(2rem, 1rem + 3%vw, 3rem);
 }
